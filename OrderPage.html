@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="./OrderPage.css">
+
+    <style>
+        #onlinepayment,#cashondelivery{
+            display: none;
+        }
+
+        #getotp1{
+            display:none;
+        }
+         
+        #bill{
+            display: none;
+        }
+       
+    </style>
+
+</head>
+<body>
+
+    
+
+    <div id="navbar">
+
+        <section id="content">
+
+        </section>
+
+       <a href="./index.html"><img src="./icons8-go-back-50.png" alt=""></a>
+
+    </div>
+
+    
+
+
+    <div id="maincontent" >
+
+       
+        
+       <div id="maincontent1">
+        
+
+
+        <p id="food-name"></p><br>
+
+
+    
+
+
+        <label for="quantity">Enter Quantity </label>
+        <input type="number" name="quantity" id="quantity" onchange="price()" >
+
+        <p id="price"></p>
+        
+         <br><br><br>
+        
+
+        <label for="totalamount1">Total Amount </label>
+        <input type="tel" name="" id="totalamount1" onchange="price()" readonly><br><br><br><br>
+
+
+        <label for="">Please select the payment mode</label> <br><br><br>
+        <button id="cash" >
+            <a  onclick="one()">Cash on delivery</a>
+        </button>
+
+        <button id="upi">
+            <a  onclick="two()" >Online payment</a>
+        </button>
+
+  
+        <br><br><br><br>
+
+
+
+
+
+       <div id="cashondelivery">
+    
+
+        <label for="mobileno">Enter Mobile No</label>
+        <input type="tel" name="mobileno" id="mobileno" maxlength="10" readonly>
+
+        <button id="sndotp">
+            <a onclick="return mobilevalidation()">Get OTP</a>
+
+        </button>
+            <br><br><br>
+
+        <label for="sysotp">Your OTP</label>
+        <input type="tel" name="sysotp" id="sysotp" readonly> <br><br><br>
+            
+
+        <label for="enterotp">Enter The OTP</label>
+        <input type="tel" name="enterotp" id="enterotp" placeholder="Enter the otp">
+
+        <button id="verify">
+            <a  onclick="billing('food-name'),billing1('quantity'),billing2('price'),billing3('totalamount1'),billing4('mobileno'),validation()">Verify</a>
+        </button>
+            <br><br>
+
+            
+        <h3 id="verifying" ></h3>
+        <h3 id="success"></h3>
+        <h3 id="thank"></h3>
+
+
+       </div>
+
+
+
+
+
+
+
+        <div id="onlinepayment">
+            <label for="mobileno1">Enter Mobile No</label>
+            <input type="tel" name="mobileno1" id="mobileno1" maxlength="10" readonly>
+    
+
+                <br><br><br>
+            <label for="enteramount1">Enter The Amount</label>
+            <input type="tel" name="enteramount1" id="enteramount1" placeholder="Enter the amount">
+    
+            <button id="pay1">
+                <a onclick="pay1()">Pay</a>
+            </button>
+
+            <br><br><br>
+            <button id="getotp1">
+                <a onclick="otp1()">Get OTP</a>
+    
+            </button>
+
+
+            <br><br><br><br>
+
+
+            <label for="sysotp1">Your OTP</label>
+            <input type="tel" name="sysotp1" id="sysotp1">
+    
+        
+                <br><br><br>
+            <label for="enterotp1">Enter The OTP</label>
+            <input type="tel" name="enterotp1" id="enterotp1" placeholder="Enter the otp">
+    
+            <button id="verify1">
+                <a onclick="billing('food-name'),billing1('quantity'),billing2('price'),billing3('totalamount1'),billing4('mobileno1'),validation1()">Verify</a>
+            </button>
+ 
+
+            <br><br>
+            <h3 id="verifying1"></h3>
+            <h3 id="success1"></h3>
+            <h3 id="thank1"></h3>
+
+            </div>
+
+
+
+         </div>
+
+     </div>
+     
+
+    
+
+    <script src="./OrderPage.js"></script>
+
+    <script>
+        var name=localStorage.getItem("itemname");
+        // alert(name);
+        document.getElementById("food-name").innerHTML=name;
+
+
+        var iprice=localStorage.getItem("itemsname");
+        document.getElementById("price").innerHTML=iprice;
+
+
+        //billing 
+
+function billing(id){
+    localStorage.setItem("billing",document.getElementById(id).textContent);
+}
+
+function billing1(id){
+    localStorage.setItem("billing1",document.getElementById(id).value);
+
+}
+
+function billing2(id){
+    localStorage.setItem("billing2",document.getElementById(id).textContent);
+
+}
+function billing3(id){
+    localStorage.setItem("billing3",document.getElementById(id).value);
+
+}
+
+function billing4(id){
+    localStorage.setItem("billing4",document.getElementById(id).value);
+}
+
+//mobilenumber
+   var mobilenumber =localStorage.getItem("userphone");
+   document.getElementById("mobileno").value=mobilenumber;
+   document.getElementById("mobileno1").value=mobilenumber;
+
+    </script>
+
+    
+    
+</body>
+</html>

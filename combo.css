@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+#orderplace{
+    margin-top: 130px ;
+    height: 800px;
+    width: 100%;
+    border: 2px solid black;
+    
+}
+
+
+#pizzacontent{
+    height: 740px;
+    width: 100%;
+    border: 2px solid red;
+    background-color: rgb(177, 226, 226);
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px 230px;
+    grid-template-rows: 230px 230px;
+    column-gap: 140px;
+    row-gap: 120px;
+    
+}
+
+.pizzaitems{
+    height: 295px;
+    width: 250px;
+    border: 2px solid green;
+    margin-top: 50px;
+    margin-left: 50px;  
+    border-radius: 25px 25px;
+    box-shadow: 5px 5px 10px 2px rgb(32, 94, 5) ;
+
+
+    
+}
+#pizzacontent .pizzaimg{
+    height: 210px;
+    width: 250px;
+    border: 1px solid black;
+    border: none;
+    margin-top: 15px;
+    margin-left: px;
+
+}
+
+#pizzacontent .pizzaimg img{
+    margin-top: -15px;
+    border-radius: 23px 22px 0px 0px;
+
+}
+
+.pricecontent{
+    margin-top: -10px;
+    margin-left: 50px;
+    color: blue;
+
+}
+
+h6{
+    font-size: 20px;
+    text-align: center;
+    margin-left: -55px;
+}
+
+button{
+    height: 30px;
+    width: 249px;
+    border: 1px solid green;
+    background-color: green;
+    margin-top: 1.5px;
+    margin-left: -1.3px;
+    border-radius: 0px 0px 23px 24px;
+
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}

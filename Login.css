@@ -1,0 +1,196 @@
+/* *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+  
+    display: flex;
+    justify-content: center;
+    padding-top: 293px;
+    padding-left: 15px;
+    background-image: url("./regimg.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#register{
+    height: 475px;
+    width: 640px;
+    border: 2px solid black;
+    border: none; 
+    border-radius: 5px; 
+    background-color: #058D22;
+    
+    
+}
+
+h2{
+    margin-top: 10px;
+    color: white;
+}
+
+table{
+    color: white;
+    padding-left: 60px;
+    line-height: 2.3;
+    font-size: 35px;
+    
+}
+
+input{
+    margin-left: 10px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#forget {
+    color: white;
+    margin-left: 380px;
+    font-size: 20px;
+}
+
+#submit{
+    margin-top: 15px;
+    margin-left: 290px;
+    border: none;
+    height: 25px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+button a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+#reg{
+    margin-left: 220px;
+    color: white;
+
+}
+
+
+ */
+
+
+
+ 
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(236, 80, 80);
+    position: absolute;
+    display: flex;  
+}
+#main{
+    height: 750px;
+    width: 1100px;
+    border: 2px solid black;
+    border: none;
+    border-radius: 25px; 
+    margin-left: 25%; 
+    margin-top: 90px; 
+    display: flex;  
+
+}
+
+#first{
+
+    height: 580px;
+    width: 490px;
+    border: 2px solid black; 
+    border: none;
+
+}
+img{
+    border-radius: 23px 0px 0px 25px;
+
+}
+
+#second{
+    
+        height: 580px;
+        width: 490px;
+        border: 2px solid black;
+        border-radius: 0px 25px 25px 0px;
+        border: none;
+        background-color: rgb(197, 226, 251);
+}
+
+h2{
+    margin-top: 30px;
+    font-size: 55px;
+    color:black;
+}
+
+label{
+    color: black;
+}
+
+table{
+    color: black;
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    line-height: 2.3;
+    font-size: 28px;
+    
+}
+
+input{
+    margin-left: 10px;
+    border: none;
+    height: 25px;
+    width: 250px;
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#forget {
+
+    margin-left: 320px;
+    font-size: 20px;
+}
+
+#submit{
+    margin-top: 15px;
+    margin-left: 220px;
+    border: none;
+    height: 25px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+button a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+#reg{
+    margin-left: 150px;
+
+}
+
+
+

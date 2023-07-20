@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="Welcome.css">
+    
+
+    <style>
+        #orderplace1,#orderplace2,#orderplace3{
+            display: none;
+        }
+        a{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+   <!--header part  -->
+
+    <div id="navbar">
+        <section id="content"></section>
+        <section id="content1">
+            
+            <a href="./Welcomepage.html"><img src="./smartphone (1).png" alt="" height="60px" width="70px"></a>
+
+            <h1>Food Delivery</h1>
+            <ul type="none">
+
+                <li><a href="./Register.html">Register</a></li>
+                 <li><a href="./Login.html">Login</a></li>
+
+            </ul>
+        </section>
+        <section id="content2"></section>
+    </div>
+
+
+    <!-- navbar part -->
+
+    <div id="navbar1">
+        <div id="content3"></div>
+        <nav id="content4">
+        <div><a onclick="home()">Pizza</a></div>
+        <div><a onclick="one()" >Burger</a></div>
+        <div><a onclick="two()">Chicken</a></div>
+        <div><a onclick="three()">Combo</a></div>
+        </nav>
+        <div id="content5"></div>
+    </div>
+
+
+    <!-- main content part -->
+
+        <div id="orderplace">
+
+    <section id="pizzacontent">
+
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="./Login.html"><img src="./cornpizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Corn Pizza</h6>
+                <h6>Rs.150</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+            
+        </div>
+
+        
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./mushroompizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Mushroom Pizza</h6>
+                <h6>Rs.200</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./cheesepizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+            <h6>Cheese Pizza</h6>
+            <h6>Rs.130</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+            
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./chickenpizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Chicken Pizza</h6>
+                <h6>Rs.250</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+            
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./thandoori pizza" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Thandoori chicken Pizza</h6>
+                <h6>Rs.300</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+            
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./bbq chicken pizza.png" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>BBQ Chicken Pizza</h6>
+                <h6>Rs.350</h6>
+            </div>
+            <button> 
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+        
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./chicken pepperoni pizza.png" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>chicken pepperoni pizza</h6>
+                <h6>Rs.300</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+        
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./chicken dominator.png" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>chicken dominator pizza</h6>
+                <h6>Rs.280</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+            
+        </div>
+
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./Peppy Paneer Pizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Peppy Paneer Pizza</h6>
+                <h6>Rs.450</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+        
+        </div>
+        <div class="pizzaitems">
+            <div class="pizzaimg">
+                <a href="Login.html"><img src="./Indi Tandoori Paneer Pizza.jpg" alt="" height="200px" width="247px"></a>
+            </div>
+            <div class="pricecontent">
+                <h6>Indi Tandoori Paneer Pizza</h6>
+                <h6>Rs.550</h6>
+            </div>
+            <button>
+            <a href="Login.html" class="orderbutton">Order</a>
+            </button>
+
+            
+        </div>
+        
+       
+        
+        
+    </section>
+
+    </div>
+
+    <!--burgerstart-->
+
+    <div id="orderplace1">
+
+        <section id="pizzacontent">
+    
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./vegburger.jpg" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                <h6>Veg Burger</h6>
+                <h6>Rs.100</h6>
+                </div>
+                <button>
+                <a href="" class="orderbutton">Order</a>
+                </button>
+                
+            </div>
+    
+            
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./cheeseseburger.jpg" alt="" height="200px" width="246px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Cheese Burger</h6>
+                    <h6>Rs.120</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./doublechheseburger.jpg" alt="" height="200px" width="247px"></a>
+                </div>
+                <div class="pricecontent">
+                <h6>Doublechhese Burger</h6>
+                <h6>Rs.150</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+                
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./chickenburger.jpg" alt="" height="200px" width="246px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Chicken Burger</h6>
+                    <h6>Rs.200</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+                
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./friedchickenburger.jpg" alt="" height="200px" width="247px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Fried chicken Burger</h6>
+                    <h6>Rs.250</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+                
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./grilledchickenburger.jpg" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Grilledchicken Burger</h6>
+                    <h6>Rs.320</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+            
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./bbqburger.jpg" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>BBQ Burger</h6>
+                    <h6>Rs.350</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+            
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./zingerchickenburger.jpg" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Zinger Chicken Burger</h6>
+                    <h6>Rs.380</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+                
+            </div>
+    
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./pannerbuger.png" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Panner Buger</h6>
+                    <h6>Rs.190</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+            
+            </div>
+            <div class="pizzaitems">
+                <div class="pizzaimg">
+                    <a href="Login.html"><img src="./crispy chickenburger.jpg" alt="" height="200px" width="245px"></a>
+                </div>
+                <div class="pricecontent">
+                    <h6>Crispy Chicken Burger</h6>
+                    <h6>Rs.220</h6>
+                </div>
+                <button>
+                <a href="Login.html" class="orderbutton">Order</a>
+                </button>
+    
+                
+            </div>
+            
+           
+            
+            
+        </section>
+    
+        </div>
+
+        <!--chickenstart-->
+
+        <div id="orderplace2">
+
+            <section id="pizzacontent">
+        
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chickenwings.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                    <h6>Chicken Wings 3pcs</h6>
+                    <h6>Rs.100</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+                    
+                </div>
+        
+                
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chickenstrips.jpg" alt="" height="200px" width="246px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>Chicken Strips 3pcs</h6>
+                        <h6>Rs.130</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chicken1pcs.jpg" alt="" height="200px" width="247px"></a>
+                    </div>
+                    <div class="pricecontent">
+                    <h6>KFC Chicken 1pcs</h6>
+                    <h6>Rs.110</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chicken3pcs.jpg" alt="" height="200px" width="246px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>KFC Chicken 3Pcs</h6>
+                        <h6>Rs.220</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chicken6pcs.jpg" alt="" height="200px" width="247px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>KFC Chicken 6Pcs</h6>
+                        <h6>Rs.400</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./bucketchicken.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>Bucket Chicken</h6>
+                        <h6>Rs.550</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chickenballs.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>chicken Balls 4pcs</h6>
+                        <h6>Rs.60</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chockennugets.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>Chicken Nuggets 6pcs</h6>
+                        <h6>Rs.120</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                    
+                </div>
+        
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chicken12pcs.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>Chicken 12Pcs</h6>
+                        <h6>Rs.750</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="Login.html"><img src="./chickenperiperi.jpg" alt="" height="200px" width="245px"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6>Chicken Peri Peri</h6>
+                        <h6>Rs.550</h6>
+                    </div>
+                    <button>
+                    <a href="Login.html" class="orderbutton">Order</a>
+                    </button>
+        
+                    
+                </div>
+                
+               
+                
+                
+            </section>
+        
+            </div>
+
+            <!--combostart-->
+
+            <div id="orderplace3">
+
+                <section id="pizzacontent">
+            
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./combopic.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                        <h6>Chicken Buger Combo</h6>
+                        <h6>Rs.250</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+                        
+                    </div>
+            
+                    
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./vegburgercombo.png" alt="" height="200px" width="246px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Veg Burger Combo</h6>
+                            <h6>Rs.150</h6>
+                            </div>
+                            <button>
+                            <a href="Login.html" class="orderbutton">Order</a>
+                            </button>
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./burgerandpizzacombo1.png" alt="" height="200px" width="247px"></a>
+                        </div>
+                        <div class="pricecontent">
+                        <h6>Burger&Pizza Combo</h6>
+                        <h6>Rs.300</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./vegpizzacombo.jpg" alt="" height="200px" width="246px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Veg pizza Combo</h6>
+                            <h6>Rs.180</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./chickenpizzacombo.jpg" alt="" height="200px" width="247px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Chicken pizz combo</h6>
+                            <h6>Rs.250</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./twochickenpizza.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Two Chicken Pizza</h6>
+                            <h6>Rs.350</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./chickenwithcoke.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Chicken 3pcs Combo</h6>
+                            <h6>Rs.250</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./chickenwithrice.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Chicken&Rice combo</h6>
+                            <h6>Rs.300</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                        
+                    </div>
+            
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./chickenwithburger.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Chicken&birger combo</h6>
+                            <h6>Rs.550</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="Login.html"><img src="./familychicken.jpg" alt="" height="200px" width="245px"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6>Family pack</h6>
+                            <h6>Rs.700</h6>
+                        </div>
+                        <button>
+                        <a href="Login.html" class="orderbutton">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    
+                   
+                    
+                    
+                </section>
+            
+                </div>
+
+<script>
+
+      function one(){
+        document.getElementById("orderplace").style.display="none";
+        document.getElementById("orderplace3").style.display="none";
+        document.getElementById("orderplace2").style.display="none";
+        document.getElementById("orderplace1").style.display="flex";
+      }
+      function home(){
+        document.getElementById("orderplace1").style.display="none";
+        document.getElementById("orderplace3").style.display="none";
+        document.getElementById("orderplace2").style.display="none";
+        document.getElementById("orderplace").style.display="flex";
+      }
+      function two(){
+        document.getElementById("orderplace").style.display="none";
+        document.getElementById("orderplace3").style.display="none";
+        document.getElementById("orderplace1").style.display="none";
+        document.getElementById("orderplace2").style.display="flex";
+      } 
+      function three(){
+        document.getElementById("orderplace").style.display="none";
+        document.getElementById("orderplace1").style.display="none";
+        document.getElementById("orderplace2").style.display="none";
+        document.getElementById("orderplace3").style.display="flex";
+      }     
+
+</script>
+
+
+
+
+</body>
+</html>

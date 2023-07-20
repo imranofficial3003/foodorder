@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food app</title>
+    <link rel="stylesheet" href="./index.css">
+    
+
+    <style>
+        #orderplace1,#orderplace2,#orderplace3,#cartcashondelivery,#cartonlinepayment,#Cartorderplace{
+            display: none;
+        }
+        a{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+   <!--header part  -->
+
+    <div id="navbar">
+        <section id="content"></section>
+        <section id="content1">
+            
+            <a href="./index.html"><img src="./smartphone (1).png" alt="" height="60px" width="70px"></a>
+
+
+            <!-- location search -->
+
+            <!-- <form action="#" >
+
+
+                <input type="text" list="search" name="searching" id="searching" placeholder="Enter your location">
+          
+                <datalist id="search"> 
+                    
+                    <option value="Aalanthur">Aalanthur</option>
+                    <option value="Arumbakkam">Arumbakkam</option>
+                    <option value="Ambattur">Ambattur</option>
+                    <option value="Aavadi">Aavadi</option>
+                    <option value="Ashok nagar">Ashok nagar</option>
+                    <option value="Ekkaatuthangal">Ekkaatuthangal</option>
+                    <option value="Guindy">Guindy</option>
+                    <option value="Kodampakkam">Kodampakkam</option>
+                    <option value="vadapalani">vadapalani</option>
+                    <option value="velachery">velachery</option>
+                    <option value="koyambedu">koyambedu</option>
+                    <option value="Thirumangalam">Thirumangalam</option>
+                    <option value="T.nagar">T.nagar</option>
+                    <option value="Nandanam">Nandanam</option>
+                    <option value="meenampakkam">meenampakkam</option>
+                    <option value="chrompet">chrompet</option>
+
+
+                </datalist>
+
+                <button onclick="getvalue()">get value</button>
+
+            </form> -->
+
+            <h1>Food Delivery</h1>
+            <ul type="none">
+
+                
+                
+                <!-- <li><a href="./Cart.html">Cart</a></li> -->
+                <!-- <div><a onclick="cartclick()">cart</a></div> -->
+                <!-- <ion-icon name="cart"  id="cart-icon"></ion-icon> -->
+                <li id="cart-icon">cart</li>
+
+
+                <div class="cart1">
+                    <div class="cart-title">Cart Items</div>
+                    <div class="cart-content">
+                        
+                
+                        <!-- <div class="cart-box">
+                            <img src="./cornpizza.jpg" class="cart-img">
+                            <div class="detail-box">
+                            <div class="cart-food-title">Corn pizza</div>
+                            <div class="price-box">
+                                <div class="cart-price">Rs.150</div>
+                                <div class="cart-amt">Rs.150</div>
+                            </div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <ion-icon name="trash" class="cart-remove"></ion-icon>
+                        </div>
+                
+                        <div class="cart-box">
+                            <img src="./cornpizza.jpg" class="cart-img">
+                            <div class="detail-box">
+                            <div class="cart-food-title" id="ftitle">Corn pizza</div>
+                            <div class="price-box">
+                                <div class="cart-price">Rs.150</div>
+                                <div class="cart-amt">Rs.150</div>
+                            </div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <ion-icon name="trash" class="cart-remove"></ion-icon>
+                        </div> -->
+                
+                
+                    </div>
+                
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">Rs.0</div>
+                    </div>
+                    <!-- <a href="./Cart.html"  class="btn-buy" >Place Order</a> -->
+                    <!-- <button><a onclick="orderplace()">order</a></button> -->
+                    <button id="cartplaceorder">
+                        <a onclick="ordering(),ordering1('ftitle')">Order Place</a>
+                    </button>
+                    
+                    <!-- <a href="./index.html"><img src="./icons8-go-back-50.png" alt=""></a> -->
+                    <ion-icon name="close" id="cart-close"></ion-icon>
+                
+                
+                   </div>
+                
+                 <li><a href="./Welcome.html">Logout</a></li>
+
+            </ul>
+        </section>
+        <section id="content2"></section>
+    </div>
+
+
+    <!-- navbar part -->
+
+    <div id="navbar1">
+        <div id="content3"></div>
+        <nav id="content4">
+        <div><a onclick="burger()">Pizza</a></div>
+        <div><a onclick="pizza()">Burger</a></div>
+        <div><a onclick="chicken()">Chicken</a></div>
+        <div><a onclick="combo()">Combo</a></div>
+        </nav>
+        <div id="content5"></div>
+    </div>
+
+        
+
+    <div id="Cartorderplace">
+
+
+        <label for="">Select Payment method</label>
+        <button onclick="cartcashdelivery()" class="mode">Cash On Delivery</button>
+        <button onclick="cartonlinedelivery()" class="mode">Online Payment</button>
+        
+
+        <div id="cartcashondelivery">
+
+              <label for="cart-amount">Your Total amount</label>
+              <input type="tel" name="cart-amout" id="cart-amount" readonly><br><br>  
+
+            <label for="cart-enter-price">Enter amount</label>
+            <input type="tel" name="cart-enter-price" id="cart-enter-price"><br><br>
+
+            <label for="cart-enter-mobilenumber">Enter Mobile number</label>
+            <input type="tel" name="cart-enter-mobilenumber" id="cart-enter-mobilenumber" maxlength="10"><br><br>
+
+             <button id="getotp">
+                <a onclick="cartotp()">Get-OTP</a>
+             </button>  <br><br>
+
+             <label for="">Your OTP</label>
+             <input type="tel" name="sysotp" id="sysotp"> <br><br>
+
+             <label for="cart-enter-otp">Enter OTP</label>
+             <input type="tel" name="cart-enter-otp" id="cart-enter-otp">
+
+             <!-- <button onclick="cartverify()" id="verify">Verify</button>
+             -->
+             
+             <a  id="cverify" onclick="cverify()">verify</a>
+            </div>
+
+
+         <div id="cartonlinepayment">
+
+            <label for="">Your Total amount</label>
+            <input type="tel" name="cart-amout1" id="cart-amount1" readonly><br><br>
+
+            <label for="cart-enter-price">Enter amount</label>
+            <input type="tel" name="cart-enter-price" id="cart-enter-price1"><br><br>
+
+            <label for="cart-enter-mobilenumber">Enter Mobile number</label>
+            <input type="tel" name="cart-enter-mobilenumber" id="cart-enter-mobilenumber1" maxlength="10"><br><br>
+
+            <button id="getotp">
+                <a onclick="cartotp1()">Get-OTP</a>
+             </button>  <br><br>
+
+             <label for="">Your OTP</label>
+             <input type="tel" name="sysotp1" id="sysotp1"> <br><br>
+
+             <label for="cart-enter-otp">Enter OTP</label>
+             <input type="tel" name="cart-enter-otp" id="cart-enter-otp1">
+
+             <a  id="pverify" onclick="pverify()">verify</a>
+             
+             
+        </div>
+
+
+        
+
+       
+    </div>
+
+           <!-- main content part -->
+
+        <div id="orderplace">
+
+            <section id="pizzacontent">
+        
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./cornpizza.jpg"  class="food-img" alt="" height="200px" width="247px" onclick="itemnames('1'),itemsname('01')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="1" >Corn Pizza</h6>
+                        <h6 class="food-price" id="01">Rs.150</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="OrderPage.html" class="orderbutton"  onclick="itemnames('1'),itemsname('01')">Order</a>
+                    <!-- <p id="foood"></p> -->
+                    </button>
+                    
+                </div>
+        
+                
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                      <a href="./OrderPage.html"><img src="./mushroompizza.jpg" id="food-img"  alt="" height="200px" width="247px" onclick="itemnames('2'),itemsname('02')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="2" >Mushroom Pizza</h6>
+                        <h6 class="food-price" id="02">Rs.200</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('2'),itemsname('02')">Order</a>
+                        </button>
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./cheesepizza.jpg" alt="" height="200px" width="247px" onclick="itemnames('3'),itemsname('03')"></a>
+                    </div>
+                    <div class="pricecontent">
+                    <h6 class="food-title" id="3">Cheese Pizza</h6>
+                    <h6 class="food-price" id="03">Rs.130</h6>
+                    <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('3'),itemsname('03')" >Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./chickenpizza.jpg" alt="" height="200px" width="247px" onclick="itemnames('4'),itemsname('04')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="4">Chicken Pizza</h6>
+                        <h6 class="food-price" id="04">Rs.250</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton"  onclick="itemnames('4'),itemsname('04')">Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./thandoori pizza" alt="" height="200px" width="247px" onclick="itemnames('5'),itemsname('05')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="5">Thandoori chicken Pizza</h6>
+                        <h6 class="food-price" id="05">Rs.300</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton"  onclick="itemnames('5'),itemsname('05')">Order</a>
+                    </button>
+        
+                    
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./bbq chicken pizza.png" alt="" height="200px" width="247px" onclick="itemnames('6'),itemsname('06')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="6">BBQ Chicken Pizza</h6>
+                        <h6 class="food-price" id="06">Rs.350</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button> 
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('6'),itemsname('06')">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./chicken pepperoni pizza.png" alt="" height="200px" width="247px" onclick="itemnames('7'),itemsname('07')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="7">chicken pepperoni pizza</h6>
+                        <h6 class="food-price" id="07">Rs.300</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('7'),itemsname('07')">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./chicken dominator.png" alt="" height="200px" width="247px" onclick="itemnames('8'),itemsname('08')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="8">chicken dominator pizza</h6>
+                        <h6 class="food-price" id="08">Rs.280</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('8'),itemsname('08')">Order</a>
+                    </button>
+        
+                    
+                </div>
+        
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./Peppy Paneer Pizza.jpg" alt="" height="200px" width="247px" onclick="itemnames('9'),itemsname('09')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="9">Peppy Paneer Pizza</h6>
+                        <h6 class="food-price" id="09">Rs.450</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('9'),itemsname('09')">Order</a>
+                    </button>
+        
+                
+                </div>
+                <div class="pizzaitems">
+                    <div class="pizzaimg">
+                        <a href="./OrderPage.html"><img src="./Indi Tandoori Paneer Pizza.jpg" alt="" height="200px" width="247px" onclick="itemnames('10'),itemsname('010')"></a>
+                    </div>
+                    <div class="pricecontent">
+                        <h6 class="food-title" id="10">Indi Tandoori Paneer Pizza</h6>
+                        <h6 class="food-price" id="010">Rs.550</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                    </div>
+                    <button>
+                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('10'),itemsname('010')" >Order</a>
+                    </button>
+        
+                    
+                </div>
+                
+               
+                
+                
+            </section>
+        
+            </div>
+        
+            <!--burgerstart-->
+        
+            <div id="orderplace1">
+        
+                <section id="pizzacontent">
+            
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="OrderPage.html"><img src="./vegburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('11'),itemsname('011')"></a>
+                        </div>
+                        <div class="pricecontent">
+                        <h6 class="food-title" id="11">Veg Burger</h6>
+                        <h6 class="food-price" id="011">Rs.100</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('11'),itemsname('011')">Order</a>
+                        </button>
+                        
+                    </div>
+            
+                    
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./cheeseseburger.jpg" alt="" height="200px" width="246px" onclick="itemnames('12'),itemsname('012')"></a>
+                        </div>
+                        <div class="pricecontent">
+                      <h6 class="food-title" id="12">Cheese Burger</h6>
+                        <h6  class="food-price" id="012">Rs.120</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('12'),itemsname('012')">Order</a>
+                            </button>
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./doublechheseburger.jpg" alt="" height="200px" width="247px" onclick="itemnames('13'),itemsname('013')"></a>
+                        </div>
+                        <div class="pricecontent">
+                        <h6 class="food-title" id="13">Doublecheese Burger</h6>
+                        <h6  class="food-price" id="013">Rs.150</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('13'),itemsname('013')">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./chickenburger.jpg" alt="" height="200px" width="246px" onclick="itemnames('14'),itemsname('014')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="14">Chicken Burger</h6>
+                        <h6  class="food-price" id="014">Rs.200</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('14'),itemsname('014')">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./friedchickenburger.jpg" alt="" height="200px" width="247px" onclick="itemnames('15'),itemsname('015')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="15">Fried Chicken Burger</h6>
+                            <h6  class="food-price" id="015">Rs.250</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('15'),itemsname('015')">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./grilledchickenburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('16'),itemsname('016')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="16">Grilled Chicken Burger</h6>
+                            <h6  class="food-price"  id="016">Rs.320</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('16'),itemsname('016')">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./bbqburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('17'),itemsname('017')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="17">BBQ Chicken Burger</h6>
+                            <h6  class="food-price" id="017">Rs.350</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('17'),itemsname('017')">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./zingerchickenburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('18'),itemsname('018')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="18">Zinger Chicken Burger</h6>
+                            <h6  class="food-price" id="018">Rs.380</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('18'),itemsname('018')">Order</a>
+                        </button>
+            
+                        
+                    </div>
+            
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./pannerbuger.png" alt="" height="200px" width="245px" onclick="itemnames('19'),itemsname('019')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="19">Panner Burger</h6>
+                            <h6  class="food-price" id="019">Rs.190</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('19'),itemsname('019')">Order</a>
+                        </button>
+            
+                    
+                    </div>
+                    <div class="pizzaitems">
+                        <div class="pizzaimg">
+                            <a href="./OrderPage.html"><img src="./crispy chickenburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('20'),itemsname('020')"></a>
+                        </div>
+                        <div class="pricecontent">
+                            <h6 class="food-title" id="20">crispy Chicken Burger</h6>
+                            <h6  class="food-price" id="020">Rs.120</h6>
+                            <ion-icon name="cart" class="add-cart"></ion-icon>
+                        </div>
+                        <button>
+                        <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('20'),itemsname('020')">Order</a>
+                        </button>
+            
+                        
+                    </div>
+                    
+                   
+                    
+                    
+                </section>
+            
+                </div>
+        
+                <!--chickenstart-->
+        
+                <div id="orderplace2">
+        
+                    <section id="pizzacontent">
+                
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chickenwings.jpg" alt="" height="200px" width="245px" onclick="itemnames('21'),itemsname('021')"></a>
+                            </div>
+                            <div class="pricecontent">
+                            <h6 class="food-title" id="21">Chicken Wings 3pcs</h6>
+                        <h6  class="food-price" id="021">Rs.100</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('21'),itemsname('021')">Order</a>
+                            </button>
+                            
+                        </div>
+                
+                        
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chickenstrips.jpg" alt="" height="200px" width="246px" onclick="itemnames('22'),itemsname('022')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="22">Chicken Strips 3pcs</h6>
+                        <h6  class="food-price" id="022">Rs.130</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('22'),itemsname('022')">Order</a>
+                                </button>
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chicken1pcs.jpg" alt="" height="200px" width="247px" onclick="itemnames('23'),itemsname('023')"></a>
+                            </div>
+                            <div class="pricecontent">
+                            <h6 class="food-title" id="23">KFC Chicken 1pcs</h6>
+                        <h6  class="food-price" id="023">Rs.110</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('23'),itemsname('023')">Order</a>
+                            </button>
+                
+                            
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chicken3pcs.jpg" alt="" height="200px" width="246px" onclick="itemnames('24'),itemsname('024')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="24">KFC Chicken 3pcs</h6>
+                                <h6  class="food-price" id="024">Rs.220</h6>
+                                <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('24'),itemsname('024')">Order</a>
+                            </button>
+                
+                            
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chicken6pcs.jpg" alt="" height="200px" width="247px" onclick="itemnames('25'),itemsname('025')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="25">KFC Chicken 6pcs</h6>
+                        <h6  class="food-price" id="025">Rs.400</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('25'),itemsname('025')">Order</a>
+                            </button>
+                
+                            
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./bucketchicken.jpg" alt="" height="200px" width="245px" onclick="itemnames('26'),itemsname('026')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="26">Bucket Chicken</h6>
+                        <h6  class="food-price" id="026">Rs.550</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('26'),itemsname('026')">Order</a>
+                            </button>
+                
+                        
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chickenballs.jpg" alt="" height="200px" width="245px" onclick="itemnames('27'),itemsname('027')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="27">Chicken Balls 4pcs</h6>
+                        <h6  class="food-price" id="027">Rs.60</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('27'),itemsname('027')">Order</a>
+                            </button>
+                
+                        
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chockennugets.jpg" alt="" height="200px" width="245px" onclick="itemnames('28'),itemsname('028')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="28">Chicken Nuggets 6pcs</h6>
+                        <h6  class="food-price" id="028">Rs.120</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('28'),itemsname('028')">Order</a>
+                            </button>
+                
+                            
+                        </div>
+                
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chicken12pcs.jpg" alt="" height="200px" width="245px" onclick="itemnames('29'),itemsname('029')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="29">Chicken 12pcs</h6>
+                        <h6  class="food-price" id="029">Rs.750</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('29'),itemsname('029')">Order</a>
+                            </button>
+                
+                        
+                        </div>
+                        <div class="pizzaitems">
+                            <div class="pizzaimg">
+                                <a href="./OrderPage.html"><img src="./chickenperiperi.jpg" alt="" height="200px" width="245px" onclick="itemnames('30'),itemsname('030')"></a>
+                            </div>
+                            <div class="pricecontent">
+                                <h6 class="food-title" id="30">Chicken peri peri</h6>
+                                <h6  class="food-price" id="030">Rs.550</h6>
+                                <ion-icon name="cart" class="add-cart"></ion-icon>
+                            </div>
+                            <button>
+                            <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('30'),itemsname('030')">Order</a>
+                            </button>
+                
+                            
+                        </div>
+                        
+                       
+                        
+                        
+                    </section>
+                
+                    </div>
+        
+                    <!--combostart-->
+        
+                    <div id="orderplace3">
+        
+                        <section id="pizzacontent">
+                    
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./combopic.jpg" alt="" height="200px" width="245px" onclick="itemnames('31'),itemsname('031')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                <h6 class="food-title" id="31">Chicken Burger Combo</h6>
+                        <h6  class="food-price" id="031">Rs.250</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('31'),itemsname('031')">Order</a>
+                                </button>
+                                
+                            </div>
+                    
+                            
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./vegburgercombo.png" alt="" height="200px" width="246px" onclick="itemnames('32'),itemsname('032')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="32">veg Burger Combo</h6>
+                        <h6  class="food-price" id="032">Rs.150</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                                    </div>
+                                    <button>
+                                    <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('32'),itemsname('032')">Order</a>
+                                    </button>
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./burgerandpizzacombo1.png" alt="" height="200px" width="247px" onclick="itemnames('33'),itemsname('033')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                <h6 class="food-title" id="33">Burger&Pizza Combo</h6>
+                        <h6  class="food-price" id="033">Rs.300</h6>
+                        <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('33'),itemsname('033')">Order</a>
+                                </button>
+                    
+                                
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./vegpizzacombo.jpg" alt="" height="200px" width="246px" onclick="itemnames('34'),itemsname('034')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="34">Veg Pizza Combo</h6>
+                                    <h6  class="food-price" id="034">Rs.180</h6>
+                                    <ion-icon name="cart" class="add-cart"></ion-icon>
+                                    
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('34'),itemsname('034')">Order</a>
+                                </button>
+                    
+                                
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./chickenpizzacombo.jpg" alt="" height="200px" width="247px" onclick="itemnames('35'),itemsname('035')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="35">Chicken pizza Combo</h6>
+                                     <h6  class="food-price" id="035">Rs.250</h6>
+                                      <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('35'),itemsname('035')">Order</a>
+                                </button>
+                    
+                                
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./twochickenpizza.jpg" alt="" height="200px" width="245px" onclick="itemnames('36'),itemsname('036')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="36"> Two Chicken pizza</h6>
+                                    <h6  class="food-price" id="036">Rs.350</h6>
+                                     <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('36'),itemsname('036')">Order</a>
+                                </button>
+                    
+                            
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./chickenwithcoke.jpg" alt="" height="200px" width="245px" onclick="itemnames('37'),itemsname('037')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="37">Chicken 3pcs Combo</h6>
+                                    <h6  class="food-price" id="037">Rs.250</h6>
+                                     <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('37'),itemsname('037')">Order</a>
+                                </button>
+                    
+                            
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./chickenwithrice.jpg" alt="" height="200px" width="245px" onclick="itemnames('38'),itemsname('038')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="38">Chicken&Rice Combo</h6>
+                                    <h6  class="food-price" id="038">Rs.300</h6>
+                                     <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('38'),itemsname('038')">Order</a>
+                                </button>
+                    
+                                
+                            </div>
+                    
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./chickenwithburger.jpg" alt="" height="200px" width="245px" onclick="itemnames('39'),itemsname('039')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="39">Chicken&Burger Combo</h6>
+                                    <h6  class="food-price" id="039">Rs.550</h6>
+                                     <ion-icon name="cart" class="add-cart"></ion-icon>
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('39'),itemsname('039')">Order</a>
+                                </button>
+                    
+                            
+                            </div>
+                            <div class="pizzaitems">
+                                <div class="pizzaimg">
+                                    <a href="./OrderPage.html"><img src="./familychicken.jpg" alt="" height="200px" width="245px" onclick="itemnames('40'),itemsname('040')"></a>
+                                </div>
+                                <div class="pricecontent">
+                                    <h6 class="food-title" id="40">Family Pack</h6>
+                                     <h6  class="food-price" id="040">Rs.700</h6>
+                                      <ion-icon name="cart" class="add-cart"></ion-icon> 
+                                </div>
+                                <button>
+                                <a href="./OrderPage.html" class="orderbutton" onclick="itemnames('40'),itemsname('040')">Order</a>
+                                </button>
+                    
+                                
+                            </div>
+                            
+                           
+                            
+                            
+                        </section>
+                    
+                        </div>
+        
+                        
+        
+        
+
+                <script>
+
+                      function burger(){
+                      document.getElementById("orderplace1").style.display="none";
+                      document.getElementById("orderplace3").style.display="none";
+                      document.getElementById("orderplace2").style.display="none";
+                      document.getElementById("orderplace").style.display="flex";
+                    }
+
+                    function pizza(){
+                      document.getElementById("orderplace").style.display="none";
+                      document.getElementById("orderplace3").style.display="none";
+                      document.getElementById("orderplace2").style.display="none";
+                      document.getElementById("orderplace1").style.display="flex";
+                    }
+                    
+                    function chicken(){
+                      document.getElementById("orderplace").style.display="none";
+                      document.getElementById("orderplace3").style.display="none";
+                      document.getElementById("orderplace1").style.display="none";
+                      document.getElementById("orderplace2").style.display="flex";
+                    } 
+                    function combo(){
+                      document.getElementById("orderplace").style.display="none";
+                      document.getElementById("orderplace1").style.display="none";
+                      document.getElementById("orderplace2").style.display="none";
+                      document.getElementById("orderplace3").style.display="flex";
+                    }  
+                    
+              
+              </script>
+
+
+<script>
+
+    //cart billing
+function ordering1(id){
+    localStorage.setItem("ordering",document.getElementById(id).textContent);
+}
+
+
+
+
+function itemnames( id ){
+
+    localStorage.setItem("itemname",document.getElementById(id).textContent);
+
+   
+}
+
+function itemsname(id){
+     var n=document.getElementById(id).textContent;
+
+    var itemsprices=parseFloat(n.replace("Rs.",""));
+    console.log(itemsprices);
+
+    localStorage.setItem("itemsname",itemsprices);
+    
+}
+
+ </script>
+<script src="./OrderPage.js"></script>
+<script src="./Cart.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>

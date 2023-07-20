@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./Register.css">
+
+</head>
+<body>
+
+    <div id="main">
+
+        <div id="first">
+
+            <img src="./regimg11.webp" alt=""  height="580px"  width="490px">
+        </div>
+
+        <div id="second">
+            
+            <form action="Register.php" method="post" onsubmit="return validation()" autocomplete="off">
+                <center><h2>Register</h2><br><br></center>
+
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" ><br><br>
+                
+                <label for="mobile">mobile number</label>
+                <input type="tel" name="mobile" id="mobile" maxlength="10"> <br><br>
+                
+                <label for="mail">Email</label>
+                <input type="email" name="mail" id="mail"> <br><br>
+                
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass"> <br><br>
+                
+                <label for="repass">Repassword</label>
+                <input type="password" name="repass" id="repass" > <br><br>
+                
+
+                <input type="submit" value="submit" id="submit">
+                <input type="reset" value="Reset" id="reset">
+                
+                </form>
+              
+        </div>
+    </div>
+   <script src="./Register.js"></script>
+
+</body>
+</html>

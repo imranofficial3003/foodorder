@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(229, 202, 255);
+}
+label{
+    font-size: 12px;
+}
+
+#navbar{
+    height: 60px;
+    width: 100%;
+    border: 2px solid black;
+    border: none;
+    display: flex;
+}
+
+#navbar #content{
+    height: 60px;
+    width: 50px;
+    border: 2px solid red;
+    border: none;
+}
+
+#maincontent{
+    height: 850px;
+    width: 100%;
+    border: 2px solid red; 
+    border: none;  
+}
+
+#maincontent1{
+    height: 850px;
+    width: 94%;
+    border: 2px solid rgb(67, 106, 248);
+    border: none;
+    margin-left: 50px;  
+}
+
+
+#maincontent p{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(6, 34, 30);   
+}
+
+#maincontent1 label{
+    font-size: 30px;
+}
+
+
+#maincontent1 #quantity{
+    font-size: 17px;
+    margin-left: 40px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-radius: 25px;
+}
+
+
+#maincontent1 #totalamount1{
+   margin-left: 50px;
+   border-bottom: 2px solid black;
+   border-radius: 25px;
+   text-align: center;
+   font-size: 17px;
+    
+}
+
+
+
+
+
+#maincontent1 #cash{
+    height: 70px;
+    width: 150px;
+    margin-left: 230px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+#maincontent1 a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#maincontent1 #upi{
+    margin-top: 20px;
+    height: 70px;
+    width: 150px;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+#maincontent1 a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#maincontent1 #cashondelivery{
+    border: 2px solid black;
+    border: none;
+}
+
+
+#maincontent #sndotp{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+
+}
+
+#maincontent1 #mobileno{
+    font-size: 17px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+}
+
+#maincontent1 #sysotp{
+    font-size: 17px;
+    margin-left: 100px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+
+}
+
+#maincontent1 #enterotp{
+    font-size: 17px;
+    margin-left: 40px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+}
+
+#maincontent #verify{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+}
+
+
+
+#maincontent1 #onlinepayment{
+    margin-top: 25px;
+    border: 2px solid black;
+    border: none;
+}
+
+
+#maincontent #sndotp1{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+
+}
+
+#maincontent1 #mobileno1{
+    font-size: 17px;
+    margin-left: 40px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+}
+
+#maincontent1 #enteramount1{
+    font-size: 17px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+
+}
+
+#maincontent1 #pay1{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+
+}
+
+#maincontent1 #getotp1{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+    margin-left: 280px;
+
+}
+
+#maincontent1 #sysotp1{
+    font-size: 17px;
+    margin-left: 125px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+
+}
+
+#maincontent1 #enterotp1{
+    font-size: 17px;
+    margin-left: 65px;
+    text-align: center;
+    border-radius: 25px;
+    border-bottom: 2px solid black;
+}
+
+#maincontent #verify1{
+    width: 90px;
+    border-color: black;
+    border-radius: 8px;
+}
+
+#maincontent1 h3{
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+
+
+#maincontent #heading{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#name{
+    margin-left: 50px;
+}
+
+#qty{
+    margin-left: 100px;
+}
+
+#price{
+    margin-left: 60px;
+}
+
+#price{
+    display: none;
+}
